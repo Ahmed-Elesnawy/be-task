@@ -27,7 +27,6 @@ class GenerateDatabase extends Command
      */
     public function handle()
     {
-        dd('test');
         return Command::SUCCESS;
     }
 }
