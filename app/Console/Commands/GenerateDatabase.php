@@ -11,14 +11,14 @@ class GenerateDatabase extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'db:generate';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Generate a new database from existing database name in env file';
 
     /**
      * Execute the console command.
@@ -27,6 +27,7 @@ class GenerateDatabase extends Command
      */
     public function handle()
     {
+        dd('test');
         return Command::SUCCESS;
     }
 }
