@@ -2,6 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Constants\UserType;
+use App\Models\User;
+use Illuminate\Contracts\Auth\Factory as AuthFactory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +20,14 @@ class TaskFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => fake()->name(),
+            'description' => fake()->unique()->safeEmail(),
+            'assigned_to_id' => function(){
+                return User::factory()->create(['type' => UserType::NORMAL])->id;
+            },
+            'assigned_by_id' => function(){
+                return User::factory()->create(['type' => UserType::ADMIN])->id;
+            }
         ];
     }
 }
