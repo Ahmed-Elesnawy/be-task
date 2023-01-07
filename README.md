@@ -39,7 +39,7 @@ an application where the admin can create a task and assign it to any non-admin 
 
 ## The development approach
 
-- I split the task to two branches (main,minimal-stracture)
-- minimal-stracture branch that have default laravel stracture without any type of overengineering
+- I split the task into two branches (main,minimal-stracture)
+- minimal-stracture branch that have default laravel stracture without any type of overe ngineering
 - main branch that have repository pattern to deal with access layer and service layer to encapsulate the bussines logic
 
