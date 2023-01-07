@@ -18,6 +18,7 @@ an application where the admin can create a task and assign it to any non-admin 
  2- Install dependencies using composer ( composer install )
  
  3- Copy .env.example to .env and add your CACHE_DRIVER and QUEUE_CONNECTION (you can use redis or database)
+ and add your database credintails
 
  4- Run "php artisan key:generate" to create application key.
 
