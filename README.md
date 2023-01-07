@@ -47,6 +47,6 @@ password: password
 ## The development approach
 
 - I split the task into two branches (main,minimal-stracture)
-- minimal-stracture branch that have default laravel stracture without any type of overe ngineering
+- minimal-stracture branch that have default laravel stracture without any type of overe engineering
 - main branch that have repository pattern to deal with access layer and service layer to encapsulate the bussines logic
 
