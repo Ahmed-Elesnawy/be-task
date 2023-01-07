@@ -7,13 +7,13 @@ use App\Models\User;
 use App\Constants\UserType;
 use Illuminate\Http\Request;
 use App\Jobs\UpdateUserStatistics;
-use App\Services\CachedUsersService;
 use App\Http\Requests\Task\StoreTaskRequest;
 
 class TaskController extends Controller
 {
     const TASKS_PER_PAGE = 10;
-    
+    const DAY_IN_SECONDS = 86400;
+        
     public function __construct()
     {
         $this->middleware(['auth']);
@@ -30,13 +30,15 @@ class TaskController extends Controller
         ]);
     }
 
-    public function create(CachedUsersService $cachedUsersService)
+    public function create()
     {
         $admins = User::ofType(UserType::ADMIN)
             ->toBase()
             ->get(['id', 'name']);
 
-        $users  = $cachedUsersService->getUsers();
+        $users  = cache()->remember('users', self::DAY_IN_SECONDS, function () {
+            return User::ofType(UserType::NORMAL)->toBase()->get(['id', 'name']);
+        });
 
         return view('tasks.create', get_defined_vars());
     }
