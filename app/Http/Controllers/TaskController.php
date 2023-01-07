@@ -13,6 +13,7 @@ use App\Http\Requests\Task\StoreTaskRequest;
 class TaskController extends Controller
 {
     const TASKS_PER_PAGE = 10;
+    
     public function __construct()
     {
         $this->middleware(['auth']);
