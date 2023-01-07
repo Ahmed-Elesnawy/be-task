@@ -13,7 +13,7 @@ an application where the admin can create a task and assign it to any non-admin 
 
 ## Installation
 
- 1- Clone project files git clone git@github.com:Ahmed-Elesnawy/be-task.git
+ 1- Clone project files (git clone git@github.com:Ahmed-Elesnawy/be-task.git)
  
  2- Install dependencies using composer ( composer install )
  
