@@ -124,7 +124,7 @@ class TaskTest extends TestCase
      *
      * @return void
      */
-    public function test_update_users_statistics_pushed_to_job_when_create_task()
+    public function test_update_users_statistics_pushed_to_jobs_when_create_task()
     {
         // Given
         $taskData = Task::factory()->make()->toArray();
