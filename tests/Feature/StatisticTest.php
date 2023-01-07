@@ -39,7 +39,7 @@ class StatisticTest extends TestCase
      *
      * @return void
      */
-    public function test_no_statistics_available_is_showed_if_no_tasks_available()
+    public function test_no_statistics_available_is_showed_if_no_statistics_available()
     {
         // Given
         $admin = User::factory()->create(['type' => UserType::ADMIN]);
