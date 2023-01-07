@@ -34,7 +34,14 @@ an application where the admin can create a task and assign it to any non-admin 
  
  10- Run "php artisan queue:work" to consume messages and update user statistices .
  
- 11- Run "php artisan test" to run tests 
+ 11- Run "php artisan test" to run tests
+ 
+ 12 - go to http://127.0.0.1:8000 and test.
+
+## Credentials
+
+email: admin@test.com
+password: password
 
 
 ## The development approach
