@@ -17,7 +17,7 @@ use App\Http\Controllers\StatisticController;
 */
 
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
